@@ -17,19 +17,12 @@
 (function(){
     'use strict';
 
-    // We rely on Spareroom's jQuery
-    if (typeof(jQuery)  === "undefined"){
+    let button = document.querySelector('div[aria-label="Collapse"][role="button"]');
+
+    if (!button || button.length === 0){
         return;
     }
 
-    jQuery(function($){
-        let button = document.querySelector('div[aria-label="Collapse"][role="button"]');
-
-        if (!button || button.length === 0){
-            return;
-        }
-
-        button.click();
-    });
+    button.click();
 
 })();
