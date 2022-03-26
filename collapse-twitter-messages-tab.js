@@ -14,18 +14,17 @@
 /* jshint esnext: false */
 /* jshint esversion: 6 */
 
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    window.addEventListener('load', function() {
-        let button = document.querySelector('div[aria-label="Collapse"][role="button"]');
+  window.addEventListener('load', function () {
+    let button = document.querySelector('div[aria-label="Collapse"][role="button"]');
 
-        if (!button || button.length === 0){
-            return;
-        }
+    if (!button || button.length === 0) {
+      return;
+    }
 
-        button.click();
-    }, false);
-
+    button.click();
+  }, false);
 
 })();
