@@ -14,10 +14,8 @@
 /* jshint esnext: false */
 /* jshint esversion: 6 */
 
-(function () {
-  'use strict';
-
-  window.addEventListener('load', function () {
+function collapse_messages_tab() {
+  
     let button = document.querySelector('div[aria-label="Collapse"][role="button"]');
 
     if (!button || button.length === 0) {
@@ -25,6 +23,15 @@
     }
 
     button.click();
+}
+
+(function () {
+  'use strict';
+  
+  window.addEventListener('load', function () {
+      for (const x of Array(8).keys()) {
+        setTimeout(collapse_messages_tab, 500 * x);
+      }
   }, false);
 
 })();
